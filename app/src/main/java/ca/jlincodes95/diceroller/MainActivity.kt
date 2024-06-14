@@ -12,10 +12,14 @@ import androidx.core.view.WindowInsetsCompat
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var imgDiceRoll: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        imgDiceRoll = findViewById(R.id.imgDiceRoll)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -30,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun onDiceRoll() {
         Toast.makeText(this, "Rolling....", Toast.LENGTH_SHORT).show()
-        val imgDiceRoll: ImageView = findViewById(R.id.imgDiceRoll)
         val roll = Random.nextInt(6) + 1
         val diceResource = when (roll) {
             1 -> R.drawable.dice_1
