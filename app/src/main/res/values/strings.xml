@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dice roller</string>
+    <string name="btn_roll_label">Roll</string>
+    <string name="txt_dice_roll_unknown">\?</string>
+    <string name="txt_dice_roll_1">1</string>
+    <string name="txt_dice_roll_2">2</string>
+    <string name="txt_dice_roll_3">3</string>
+    <string name="txt_dice_roll_4">4</string>
+    <string name="txt_dice_roll_5">5</string>
+    <string name="txt_dice_roll_6">6</string>
+</resources>
